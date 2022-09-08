@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-17T16:59:41.195Z",
+    "end": "2022-08-17T16:59:52.412Z",
+    "duration": 11217,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "469886d9-9ecd-42b3-976f-c1d2343d77b2",
+      "title": "",
+      "fullFile": "cypress/e2e/cartCheckOut.js",
+      "file": "cypress/e2e/cartCheckOut.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c9cb10bd-3d72-4847-a035-687eaa923673",
+          "title": "To add a product to cart and checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "checkout a Chair to the cart through NavBar",
+              "fullTitle": "To add a product to cart and checkout checkout a Chair to the cart through NavBar",
+              "timedOut": null,
+              "duration": 8896,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_navbarPage.default.clickNavBarChairs();\n_productsPage.default.visibleProductsList();\n_productsPage.default.clickProduct01();\ncy.wrap(_productDetailsPage.default.invokeItemNameDesc()).as('pricebefore');\n_productDetailsPage.default.clickAddToCart();\n_navbarPage.default.clickNavbarCart();\n_checkOutPage.default.cartIsVisible();\ncy.wrap(_checkOutPage.default.invokeItemName()).as('priceafter');\ncy.then(function () {\n  expect(this.pricebefore).to.eq(this.priceafter);\n});\n_checkOutPage.default.clickAddProductToCart();\n_checkOutPage.default.clickcheckoutButton();\n_checkOutPage.default.visibleThanksPage();\n_checkOutPage.default.validateCheckout('Thank you!');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.checkout-title`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.checkout-title`, but never found it.\n    at CheckoutPage.validateCheckout (https://www.shopist.io/__cypress/tests?p=cypress/e2e/cartCheckOut.js:324:8)\n    at Context.eval (https://www.shopist.io/__cypress/tests?p=cypress/e2e/cartCheckOut.js:556:27)",
+                "diff": null
+              },
+              "uuid": "b2a009ad-96c3-442b-a420-e2ef797b3f36",
+              "parentUUID": "c9cb10bd-3d72-4847-a035-687eaa923673",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b2a009ad-96c3-442b-a420-e2ef797b3f36"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8896,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
