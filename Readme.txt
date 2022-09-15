@@ -1,5 +1,10 @@
 ******** Framework Details *********
-This repo contains E2E tests written for the website www.shopist.io 
+This repo contains E2E tests written for the website www.shopist.io.
+
+I have created three flows:
+1. A straighforward cart checkout.
+2. To validate 'Sold Out' message when i try to add a sold out item.
+3. To apply an invalid discount coupon and validate that the product price remains same.
 
 »» Tools & Programming Language:
 1.Cypress
