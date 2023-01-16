@@ -1,4 +1,6 @@
-export default class HomePage {
+import BasePage from "../Components/basePage"
+
+export default class HomePage extends BasePage{
 
     // *** static properties on home page ***
     static chairsCard = '.department:nth-child(1) .caps'

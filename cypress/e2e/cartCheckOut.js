@@ -1,11 +1,10 @@
 import BasePage from "../Page Objects/Components/basePage";
-import FooterPage from "../Page Objects/Components/footerPage";
-import NavBarPage from "../Page Objects/Components/navbarPage";
 import checkOutPage from "../Page Objects/Pages/checkOutPage";
 import ProductsDetailPage from "../Page Objects/Pages/productDetailsPage";
 import ProductsPage from "../Page Objects/Pages/productsPage";
 import HomePage from "../Page Objects/Pages/homePage";
 import chairData from "../fixtures/chairData.json";
+import CheckoutPage from "../Page Objects/Pages/checkOutPage";
 
 describe('To add a product to cart and checkout', function (){
     
@@ -18,7 +17,7 @@ describe('To add a product to cart and checkout', function (){
 })
 
     it('checkout a Chair to the cart through NavBar', function(){
-        NavBarPage.clickNavBarChairs()
+        ProductsPage.clickNavBarChairs()
         ProductsPage.visibleProductsList()
 
         
@@ -27,7 +26,7 @@ describe('To add a product to cart and checkout', function (){
 
         ProductsDetailPage.clickAddToCart();
 
-        NavBarPage.clickNavbarCart()
+        checkOutPage.clickNavbarCart()
         checkOutPage.cartIsVisible()     
        
         checkOutPage.clickAddProductToCart()

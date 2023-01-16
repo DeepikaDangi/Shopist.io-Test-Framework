@@ -1,4 +1,6 @@
-export default class CheckoutPage {
+import BasePage from "../Components/basePage"
+
+export default class CheckoutPage extends BasePage{
 
     // *** static properties of this page
     static totalCart = '.line.line-total'

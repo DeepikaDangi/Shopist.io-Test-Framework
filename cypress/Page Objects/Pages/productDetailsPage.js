@@ -1,5 +1,6 @@
+import BasePage from "../Components/basePage";
 
-export default class ProductsDetailPage {
+export default class ProductsDetailPage extends BasePage{
 
     // *** static properties of this page
     static addToCart = '.purchase-button'

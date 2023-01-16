@@ -1,4 +1,6 @@
-export default class ProductsPage {
+import BasePage from "../Components/basePage"
+
+export default class ProductsPage extends BasePage {
 
     //*** static properties to identify product page elements ***
     static productsList = '.products'
